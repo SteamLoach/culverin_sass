@@ -1,0 +1,47 @@
+/****Base****/
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/****Modifiers****/
+
+.can-wrap {flex-wrap: wrap;}
+.no-wrap {flex-wrap: wrap;}
+
+//Device Specific//
+$breakpoints: (
+  mobile: $mobile-until,
+  touch: $touch-until,
+  tablet: $tablet-until,
+  laptop: $laptop-until
+) ; 
+
+@each $key, $breakpoint in $breakpoints {
+  
+  @media screen and (max-width: $breakpoint) {
+    .#{$key}-hidden {display: none;}  
+    .#{$key}-can-wrap {flex-wrap: wrap;}
+    .#{$key}-no-wrap {flex-wrap: nowrap;}
+  }
+}
+
+@media screen and (min-width: $desktop-from) {
+  .desktop-can-wrap {flex-wrap: wrap;}
+  .desktop-no-wrap {flex-wrap: nowrap;}
+}
+
+
+  

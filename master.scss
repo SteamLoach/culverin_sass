@@ -1,0 +1,22 @@
+/****BREAKPOINTS****/
+
+
+//$mobile-from: 
+$touch-from: 425px;
+$tablet-from: 760px;
+$laptop-from: 1024px;
+$desktop-from: 1440px;
+
+$mobile-until: $touch-from;
+$touch-until: $tablet-from;
+$tablet-until: $laptop-from;
+$laptop-until: $desktop-from;
+//$desktop-until:
+
+
+
+
+/****IMPORTS****/
+@import './scaffolding/columns' ; 
+@import './scaffolding/containers' ; 
+@import './scaffolding/position' ; 

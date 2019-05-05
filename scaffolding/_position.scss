@@ -1,0 +1,89 @@
+/****Base****/
+
+//Justification
+.x-center {justify-content: center;}
+.x-around {justify-content: space-around;}
+.x-between {justify-content: space-between;}
+.x-start {justify-content: flex-start;}
+.x-end {justify-content: flex-end;}
+
+//Item Alignment 
+.y-center {align-items: center;}
+.y-stretch {align-items: stretch;}
+.y-end {align-items: flex-end;}
+.y-start {align-items: flex-start;}
+.y-baseline {align-items: baseline;}
+
+//Content Alignment
+.yc-center {align-content: center;}
+.yc-around {align-content: space-around;}
+.yc-between {align-content: space-between;}
+.yc-stretch {align-content: stretch;}
+.yc-start {align-content: flex-start;}
+.yc-end {align-content: flex-end;}
+
+//Combined
+.xy-center {justify-content: center; align-items: center;}
+
+
+
+//Device Specific//
+$breakpoints: (
+  mobile: $mobile-until,
+  touch: $touch-until,
+  tablet: $tablet-until,
+  laptop: $laptop-until,
+) ; 
+
+@each $key, $breakpoint in $breakpoints {
+  
+  @media screen and (max-width: $breakpoint) {
+    
+    .#{$key}-x-center {justify-content: center;}
+    .#{$key}-x-around {justify-content: space-around;}
+    .#{$key}-x-between {justify-content: space-between;}
+    .#{$key}-x-start {justify-content: flex-start;}
+    .#{$key}-x-end {justify-content: flex-end;}
+    
+    .#{$key}-y-center {align-items: center;}
+    .#{$key}-y-stretch {align-items: stretch;}
+    .#{$key}-y-end {align-items: flex-end;}
+    .#{$key}-y-start {align-items: flex-start;}
+    .#{$key}-y-baseline {align-items: baseline;}
+    
+    .#{$key}-yc-center {align-content: center;}
+    .#{$key}-yc-around {align-content: space-around;}
+    .#{$key}-yc-between {align-content: space-between;}
+    .#{$key}-yc-stretch {align-content: stretch;}
+    .#{$key}-yc-start {align-content: flex-start;}
+    .#{$key}-yc-end {align-content: flex-end;}
+
+    .#{$key}-xy-center {justify-content: center; align-items: center;}
+
+  }  
+}
+
+@media screen and (min-width: $desktop-from) {
+  
+    .desktop-x-center {justify-content: center;}
+    .desktop-x-around {justify-content: space-around;}
+    .desktop-x-between {justify-content: space-between;}
+    .desktop-x-start {justify-content: flex-start;}
+    .desktop-x-end {justify-content: flex-end;}
+    
+    .desktop-y-center {align-items: center;}
+    .desktop-y-stretch {align-items: stretch;}
+    .desktop-y-end {align-items: flex-end;}
+    .desktop-y-start {align-items: flex-start;}
+    .desktop-y-baseline {align-items: baseline;}
+    
+    .desktop-yc-center {align-content: center;}
+    .desktop-yc-around {align-content: space-around;}
+    .desktop-yc-between {align-content: space-between;}
+    .desktop-yc-stretch {align-content: stretch;}
+    .desktop-yc-start {align-content: flex-start;}
+    .desktop-yc-end {align-content: flex-end;}
+
+    .desktop-xy-center {justify-content: center; align-items: center;}
+  
+}

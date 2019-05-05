@@ -1,0 +1,36 @@
+/****Portrait Mobile (assumed default)****/
+  @for $i from 1 through 24 {
+    .mobile-#{$i} {width: 100% / 24 *$i;}
+  }
+
+/****Landscape Mobile / Small Touch****/
+@media screen and (min-width: $touch-from) {
+  
+  @for $i from 1 through 24 {
+    .touch-#{$i} {width: 100% / 24 *$i;}
+  }
+}
+
+/****Tablet****/
+@media screen and (min-width: $tablet-from) {
+  
+  @for $i from 1 through 24 {
+    .tablet-#{$i} {width: 100% / 24 *$i;}
+  }  
+}
+
+/****Laptop****/
+@media screen and (min-width: $laptop-from) {
+  
+  @for $i from 1 through 24 {
+    .laptop-#{$i} {width: 100% / 24 *$i;}
+  }  
+}
+
+/****Desktop****/
+@media screen and (min-width: $desktop-from) {
+  
+  @for $i from 1 through 24 {
+    .desktop-#{$i} {width: 100% / 24 *$i;}
+  }  
+}
