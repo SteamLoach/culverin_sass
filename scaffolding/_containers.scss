@@ -18,30 +18,46 @@
 
 /****Modifiers****/
 
+.hidden {display: none;}
 .can-wrap {flex-wrap: wrap;}
 .no-wrap {flex-wrap: wrap;}
 
-//Device Specific//
+//'Until' device//
 $breakpoints: (
-  mobile: $mobile-until,
-  touch: $touch-until,
-  tablet: $tablet-until,
-  laptop: $laptop-until
+  touch: $mobile-until,
+  tablet: $touch-until,
+  laptop: $tablet-until,
+  desktop: $laptop-until
 ) ; 
 
 @each $key, $breakpoint in $breakpoints {
   
   @media screen and (max-width: $breakpoint) {
-    .#{$key}-hidden {display: none;}  
-    .#{$key}-can-wrap {flex-wrap: wrap;}
-    .#{$key}-no-wrap {flex-wrap: nowrap;}
+    .hidden-until-#{$key} {display: none;}  
+    .can-wrap-until-#{$key} {flex-wrap: wrap;}
+    .no-wrap-until-#{$key} {flex-wrap: nowrap;}
   }
+  
+  @media screen and (min-width: $breakpoint) {
+    .hidden-from-#{$key} {display: none;}
+    .can-wrap-from-#{$key} {flex-wrap: wrap;}
+    .no-wrap-from-#{$key} {flex-wrap: nowrap;}  
+  }
+  
 }
 
-@media screen and (min-width: $desktop-from) {
-  .desktop-can-wrap {flex-wrap: wrap;}
-  .desktop-no-wrap {flex-wrap: nowrap;}
-}
+
+
+  
+
+  
+
+  
+
+
+
+
+
 
 
   

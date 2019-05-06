@@ -1,0 +1,56 @@
+/****Base Padding****/
+
+$pads: (
+  1: $padding-1,
+  2: $padding-2,
+  3: $padding-3,
+  4: $padding-4,
+  5: $padding-5,
+  6: $padding-6,
+  7: $padding-7,
+  8: $padding-8,
+  9: $padding-9,
+  10: $padding-10,
+  11: $padding-11,
+  12: $padding-12
+) ;
+
+$breakpoints: (
+  touch: $mobile-until,
+  tablet: $touch-until,
+  laptop: $tablet-until,
+  desktop: $laptop-until
+) ; 
+
+@each $key, $pad in $pads {
+  
+  .x-pad-#{$key} {padding-left: $pad; padding-right: $pad;}
+  .y-pad-#{$key} {padding-top: $pad; padding-bottom: $pad;}
+  .xy-pad-#{$key} {padding: $pad;}
+
+  @each $ref, $breakpoint in $breakpoints {
+    
+    @media screen and (max-width: $breakpoint) {
+      
+      .x-pad-#{$key}-until-#{$ref} {padding-left: $pad; padding-right: $pad;}
+      .y-pad-#{$key}-until-#{$ref} {padding-top: $pad; padding-bottom: $pad;}
+      .xy-pad-#{$key}-until-#{$ref} {padding: $pad;}
+      
+    }
+    
+    @media screen and (min-width: $breakpoint) {
+      
+      .x-pad-#{$key}-from-#{$ref} {padding-left: $pad; padding-right: $pad;}
+      .y-pad-#{$key}-from-#{$ref} {padding-top: $pad; padding-bottom: $pad;}
+      .xy-pad-#{$key}-from-#{$ref} {padding: $pad;}
+      
+    }
+    
+  }
+  
+}
+
+
+
+
+
