@@ -57,7 +57,7 @@ $until-breakpoints: (
     .yc-start-until-#{$key} {align-content: flex-start;}
     .yc-end-until-#{$key} {align-content: flex-end;}
 
-    .xy-center-until#{$key} {justify-content: center; align-items: center;}
+    .xy-center-until-#{$key} {justify-content: center; align-items: center;}
   }  
 }
 
@@ -71,7 +71,7 @@ $from-breakpoints: (
 
 @each $key, $breakpoint in $from-breakpoints {
 
-@media screen and (min-width: $desktop-from) {
+@media screen and (min-width: $breakpoint) {
   
     .x-center-from-#{$key} {justify-content: center;}
     .x-around-from-#{$key} {justify-content: space-around;}
@@ -92,6 +92,6 @@ $from-breakpoints: (
     .yc-start-from-#{$key} {align-content: flex-start;}
     .yc-end-from-#{$key} {align-content: flex-end;}
 
-    .xy-center-from#{$key} {justify-content: center; align-items: center;}
+    .xy-center-from-#{$key} {justify-content: center; align-items: center;}
   }
 }

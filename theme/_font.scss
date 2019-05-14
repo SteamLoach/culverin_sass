@@ -1,19 +1,22 @@
 $sizes: (
-  1:$fontsize-1,
-  2:$fontsize-2,
-  3:$fontsize-3,
-  4:$fontsize-4,
-  5:$fontsize-5,
-  6:$fontsize-6
+  smallest: $font-size-smallest,
+  smaller: $font-size-smaller,
+  small: $font-size-small,
+  medium: $font-size-medium,
+  large: $font-size-large,
+  larger: $font-size-larger,
+  largest: $font-size-largest
 );
 
 $leaders: (
-  1:$lineheight-1,
-  2:$lineheight-2,
-  3:$lineheight-3,
-  4:$lineheight-4,
-  5:$lineheight-5,
-  6:$lineheight-6,
+  none: $line-height-none,
+  smallest: $line-height-smallest,
+  smaller: $line-height-smaller,
+  small: $line-height-small,
+  medium: $line-height-medium,
+  large: $line-height-large,
+  larger: $line-height-larger,
+  largest: $line-height-largest
 ) ; 
 
 $breakpoints: (
@@ -24,31 +27,31 @@ $breakpoints: (
 ) ; 
 
 @each $key, $size in $sizes {
-  .fontsize-#{$key} {font-size: $size}  
+  .font-size-#{$key} {font-size: $size}  
   
   @each $ref, $breakpoint in $breakpoints {
     
     @media screen and (max-width: $breakpoint) {
-      .fontsize-#{$key}-until-#{$ref} {font-size: $size}
+      .font-size-#{$key}-until-#{$ref} {font-size: $size}
     }
     
     @media screen and (min-width: $breakpoint) {
-      .fontsize-#{$key}-from-#{$ref} {font-size: $size} 
+      .font-size-#{$key}-from-#{$ref} {font-size: $size} 
     } 
   }
 }
 
 @each $key, $lead in $leaders {
-  .lineheight-#{$key} {line-height: $lead}  
+  .line-height-#{$key} {line-height: $lead}  
   
   @each $ref, $breakpoint in $breakpoints {
     
     @media screen and (max-width: $breakpoint) {
-      .lineheight-#{$key}-until-#{$ref} {line-height: $lead}
+      .line-height-#{$key}-until-#{$ref} {line-height: $lead}
     }
     
     @media screen and (min-width: $breakpoint) {
-      .lineheight-#{$key}-from-#{$ref} {line-height: $lead} 
+      .line-height-#{$key}-from-#{$ref} {line-height: $lead} 
     } 
   }
 }

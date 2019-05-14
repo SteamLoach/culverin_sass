@@ -1,0 +1,116 @@
+/****Nav Components****/
+
+.nav-row {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  background-color: $primary-background;
+}
+
+.nav-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-components {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-item-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.nav-item {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.nav-item:hover { 
+  cursor: pointer;
+  
+  .dropdown-wrapper {
+    display: block;
+  }
+}
+
+
+.nav-item-header {
+  
+}
+
+//Dropdowns//
+
+.dropdown-wrapper {
+  width: 100%;
+  position: absolute;
+  display: none;
+  z-index: 5;
+}
+
+//Burger Icon//
+
+.burger-container {
+    overflow: visible;
+}
+
+.burger-container:hover {
+    cursor: pointer;
+}
+
+.burger-bar {
+    background-color: #000;
+    height: 5px;
+    width: 50px;
+    margin: 5px auto;
+    border-radius: 15px;
+    transform-origin: 50%;
+    transition: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+.burger-bar:hover {
+    transform: scale(1.1) ; 
+}
+
+
+.burger-container.is-active {
+    
+  .bar-1 {
+    position: relative;
+    transform: translate(0px, 10px) rotate(-135deg);
+  }
+  .bar-2 {
+    transform: scale(0);
+  }
+  .bar-3 {
+    position: relative;
+    transform:  translate(0px, -10px) rotate(135deg);
+  }
+}
+
+//Mobile Menu
+
+.mobile-nav-wrapper {
+  background-color: $primary-background;
+  position: absolute;
+  display: block;
+  z-index: 5;
+}
+
+
+
+
+
+
+
+
+

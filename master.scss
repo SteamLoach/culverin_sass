@@ -4,50 +4,49 @@ $touch-from: 425px;
 $tablet-from: 760px;
 $laptop-from: 1024px;
 $desktop-from: 1440px;
-
+////
 $mobile-until: $touch-from;
 $touch-until: $tablet-from;
 $tablet-until: $laptop-from;
 $laptop-until: $desktop-from;
 
+
 /****FONT****/
-$root-font: 18px;
+$font-size-root: 22px;
 ////
-$fontsize-1: 0.8rem;
-$fontsize-2: $root-font;
-$fontsize-3: 1.4rem;
-$fontsize-4: 2rem;
-$fontsize-5: 2.8rem;
-$fontsize-6: 3.6rem;
+$font-size-smallest: 0.6rem;
+$font-size-smaller: 0.8rem;
+$font-size-small: 0.9rem;
+$font-size-medium: $font-size-root;
+$font-size-large: 1.2rem;
+$font-size-larger: 1.6rem;
+$font-size-largest: 2rem;
 ////////
-$root-lineheight: 1.6;
+///////
+$line-height-root: 1.6;
 ////
-$lineheight-1: 1.2;
-$lineheight-2: $root-lineheight;
-$lineheight-3: 1.6;
-$lineheight-4: 1.8;
-$lineheight-5: 2;
-$lineheight-6: 2.4;
+$line-height-none: 1;
+$line-height-smallest: 1.1;
+$line-height-smaller: 1.2;
+$line-height-small: 1.4;
+$line-height-medium: $line-height-root;
+$line-height-large: 1.8;
+$line-height-larger: 2;
+$line-height-largest: 2.4;
 
 /****PADDING****/
-$padding-1: 0.2rem;
-$padding-2: 0.4rem;
-$padding-3: 0.6rem;
-$padding-4: 0.8rem;
-$padding-5: 1rem;
-$padding-6: 1.2rem;
-$padding-7: 1.4rem;
-$padding-8: 1.6rem;
-$padding-9: 1.8rem;
-$padding-10: 2rem;
-$padding-11: 2.6rem;
-$padding-12: 3.2rem;
-////
-$very-light-padding: $padding-1;
-$light-padding: $padding-3;
-$medium-padding: $padding-5;
-$heavy-padding: $padding-8;
-$very-heavy-padding: $padding-10;
+$padding-1: 0.1rem;
+$padding-2: 0.2rem;
+$padding-3: 0.4rem;
+$padding-4: 0.6rem;
+$padding-5: 0.8rem;
+$padding-6: 1rem;
+$padding-7: 1.2rem;
+$padding-8: 1.4rem;
+$padding-9: 1.6rem;
+$padding-10: 1.8rem;
+$padding-11: 2rem;
+$padding-12: 3rem;
 
 /****MARGINS****/
 $margin-1: 0.4rem;
@@ -63,24 +62,31 @@ $margin-10: 6.2rem;
 $margin-11: 7.6rem;
 $margin-12: 10rem;
 ////
-$very-light-margin: $margin-1;
-$light-margin: $margin-3;
-$medium-margin: $margin-5;
-$heavy-margin: $margin-8;
-$very-heavy-margin: $margin-12;
+
+/****Color****/
+$primary-font: hsl(0, 0%, 29%);
+$primary-background: hsl(0, 0%, 96%);
 
 html {
-  font-size: $root-font;
-  line-height: $root-lineheight;
+  font-family: 'Raleway', sans-serif;
+  font-size: $font-size-root;
+  line-height: $line-height-root;
+  color: $primary-font;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+p, h1, h2, h3, h4, h5 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 /****IMPORTS****/
+@import './navbar/navbar';
 @import './scaffolding/columns' ; 
 @import './scaffolding/containers' ; 
 @import './scaffolding/position' ; 
 @import './scaffolding/padding' ; 
 @import './scaffolding/margin' ; 
-@import './theme/font' ; 
+@import './theme/font' ;
