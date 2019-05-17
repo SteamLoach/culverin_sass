@@ -1,10 +1,15 @@
+/****CONFIG****/
+$nav-color: $offset-color;
+
+$nav-background: $primary-brand;
+$nav-link-hover: $secondary-brand;
+
+
 /****Nav Components****/
 
-.nav-row {
-  display: flex;
-  width: 100%;
-  flex-wrap: nowrap;
-  background-color: $primary-background;
+.nav-bar {
+  color: $nav-color;
+  background-color: $nav-background;
 }
 
 .nav-title {
@@ -13,37 +18,18 @@
   align-items: center;
 }
 
-.nav-components {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.nav-item-wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-}
-
 .nav-item {
-  flex: 1;
   position: relative;
   display: inline-block;
   text-align: center;
 }
 .nav-item:hover { 
   cursor: pointer;
+  background-color: $nav-link-hover;
   
   .dropdown-wrapper {
     display: block;
   }
-}
-
-
-.nav-item-header {
-  
 }
 
 //Dropdowns//
@@ -66,7 +52,7 @@
 }
 
 .burger-bar {
-    background-color: #000;
+    background-color: $nav-color;
     height: 5px;
     width: 50px;
     margin: 5px auto;
@@ -100,7 +86,8 @@
 //Mobile Menu
 
 .mobile-nav-wrapper {
-  background-color: $primary-background;
+  color: $nav-color;
+  background-color: $nav-background;
   position: absolute;
   display: block;
   z-index: 5;

@@ -1,3 +1,34 @@
+/****Colorscheme****/
+
+//fonts
+$primary-color: #000000;
+$offset-color: #FEFDFD;
+
+//page
+$background: null;
+$primary-brand: #060960;
+$secondary-brand: #DE0015;
+$brand-3: #374BB0;
+$brand-4: #060960;
+$brand-5: #5E4C5A;
+
+//components
+$cta: $secondary-brand;
+
+/****Typography****/
+
+$font-size-root: 18px;
+$line-height-root: 1.6;
+
+html {
+  font-family: 'Raleway', sans-serif;
+  font-size: $font-size-root;
+  line-height: $line-height-root;
+  color: $primary-color;
+}
+
+/**********************************CLASSES******************************/
+
 /****BREAKPOINTS****/
 
 $touch-from: 425px;
@@ -10,10 +41,7 @@ $touch-until: $tablet-from;
 $tablet-until: $laptop-from;
 $laptop-until: $desktop-from;
 
-
 /****FONT****/
-$font-size-root: 22px;
-////
 $font-size-smallest: 0.6rem;
 $font-size-smaller: 0.8rem;
 $font-size-small: 0.9rem;
@@ -21,9 +49,6 @@ $font-size-medium: $font-size-root;
 $font-size-large: 1.2rem;
 $font-size-larger: 1.6rem;
 $font-size-largest: 2rem;
-////////
-///////
-$line-height-root: 1.6;
 ////
 $line-height-none: 1;
 $line-height-smallest: 1.1;
@@ -62,31 +87,3 @@ $margin-10: 6.2rem;
 $margin-11: 7.6rem;
 $margin-12: 10rem;
 ////
-
-/****Color****/
-$primary-font: hsl(0, 0%, 29%);
-$primary-background: hsl(0, 0%, 96%);
-
-html {
-  font-family: 'Raleway', sans-serif;
-  font-size: $font-size-root;
-  line-height: $line-height-root;
-  color: $primary-font;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-p, h1, h2, h3, h4, h5 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-/****IMPORTS****/
-@import './navbar/navbar';
-@import './scaffolding/columns' ; 
-@import './scaffolding/containers' ; 
-@import './scaffolding/position' ; 
-@import './scaffolding/padding' ; 
-@import './scaffolding/margin' ; 
-@import './theme/font' ;
