@@ -1,15 +1,21 @@
 /****CONFIG****/
 $nav-color: $offset-color;
 
-$nav-background: $primary-brand;
-$nav-link-hover: $secondary-brand;
+$nav-background: $brand-1;
+$nav-link-hover: $brand-2;
 
+@mixin transition() {
+  transition: all;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
 
 /****Nav Components****/
 
 .nav-bar {
   color: $nav-color;
   background-color: $nav-background;
+  z-index:5;
 }
 
 .nav-title {
@@ -35,15 +41,25 @@ $nav-link-hover: $secondary-brand;
 //Dropdowns//
 
 .dropdown-wrapper {
-  width: 100%;
   position: absolute;
+  color: $nav-color;
   display: none;
   z-index: 5;
 }
 
+.dropdown-item {
+  color: $nav-color;
+  background-color: $nav-background;
+  border-radius: 15px;
+}
+
+.dropdown-item:hover {
+  background-color: $nav-link-hover;
+}
+
 //Burger Icon//
 
-.burger-container {
+.burger-container  {
     overflow: visible;
 }
 
@@ -58,9 +74,7 @@ $nav-link-hover: $secondary-brand;
     margin: 5px auto;
     border-radius: 15px;
     transform-origin: 50%;
-    transition: all;
-    transition-duration: 0.4s;
-    transition-timing-function: ease;
+    @include transition() ; 
 }
 
 .burger-bar:hover {
@@ -91,6 +105,75 @@ $nav-link-hover: $secondary-brand;
   position: absolute;
   display: block;
   z-index: 5;
+  @include transition() ;
+}
+
+.mobile-nav-item {
+  color:$nav-color;
+  background-color: $nav-background;
+}
+
+.mobile-nav-link:hover {
+  cursor: pointer;
+  background-color: $nav-link-hover;
+}
+
+//Dropdowns
+
+.mobile-dropdown-wrapper {
+  max-height: 0px;
+  overflow: hidden;
+  @include transition() ;
+}
+
+.mobile-dropdown-item:hover {
+  display: block;
+  background-color: $nav-link-hover;
+  @include transition() ;
+}
+
+.mobile-dropdown-wrapper.is-active {
+  max-height: 500px;
+}
+
+
+//Dropdown Arrows
+
+.dropdown-arrow-container:hover {
+  cursor: pointer;
+  background-color: $nav-link-hover;
+}
+
+.arrow-bar {
+  background-color: $nav-color;
+  height: 4px;
+  width: 14px;
+  border-radius: 25px;
+  transform-origin: 50%;
+  @include transition() ;
+   
+}
+
+.arrow-bar.bar-1 {
+    position: relative;
+    transform: translate(-4px, 2px) rotate(45deg);
+  }
+  
+.arrow-bar.bar-2 {
+    position: relative;
+    transform: translate(4px, -2px) rotate(-45deg);
+  }
+
+.dropdown-arrow-container.is-active {
+  
+  .bar-1 {
+    transform: translate(-3px, 2px) rotate(305deg);
+  }
+  
+  .bar-2 {
+    transform: translate(3px, -2px) rotate(-305deg);
+  }
+  
 }
 
 
