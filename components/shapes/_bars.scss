@@ -1,0 +1,9 @@
+@mixin color-bar($height, $color, $rounded) {
+  height: $height;
+  background-color: $color;
+  border-radius: $rounded;
+}
+
+.thin-bar {
+  @include color-bar(5px, $brand-3, 5px)
+}

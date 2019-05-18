@@ -105,12 +105,13 @@ $nav-link-hover: $brand-2;
   position: absolute;
   display: block;
   z-index: 5;
+  border-radius: 15px;
   @include transition() ;
+  overflow: hidden;
 }
 
 .mobile-nav-item {
-  color:$nav-color;
-  background-color: $nav-background;
+
 }
 
 .mobile-nav-link:hover {
@@ -167,11 +168,11 @@ $nav-link-hover: $brand-2;
 .dropdown-arrow-container.is-active {
   
   .bar-1 {
-    transform: translate(-3px, 2px) rotate(305deg);
+    transform: translate(-4px, 2px) rotate(-45deg);
   }
   
   .bar-2 {
-    transform: translate(3px, -2px) rotate(-305deg);
+    transform: translate(4px, -2px) rotate(45deg);
   }
   
 }

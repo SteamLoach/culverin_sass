@@ -26,6 +26,7 @@ $breakpoints: (
   desktop: $laptop-until
 ) ; 
 
+//Sizing
 @each $key, $size in $sizes {
   .font-size-#{$key} {font-size: $size}  
   
@@ -41,6 +42,7 @@ $breakpoints: (
   }
 }
 
+//Line height
 @each $key, $lead in $leaders {
   .line-height-#{$key} {line-height: $lead}  
   
@@ -55,3 +57,21 @@ $breakpoints: (
     } 
   }
 }
+
+//Alignment 
+@each $align in center, justify, left, right {
+  .text-align-#{$align} {text-align: $align;}
+}  
+
+//Color
+.brand-1 {color: $brand-1;}
+.brand-2 {color: $brand-2;}
+.brand-3 {color: $brand-3;}
+.brand-4 {color: $brand-4;}
+.brand-5 {color: $brand-5;}
+
+
+
+
+
+
