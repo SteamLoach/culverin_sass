@@ -28,7 +28,6 @@ $breakpoints: (
   .y-margin-#{$key} {margin-top: $margin; margin-bottom: $margin;}
   .xy-margin-#{$key} {margin: $margin;}
   .oneway-margin-#{$key} {margin-bottom: $margin;}
-  .pass-oneway-margin-#{$key} >* {margin-bottom: $margin;}
 
   @each $ref, $breakpoint in $breakpoints {
     
@@ -38,7 +37,6 @@ $breakpoints: (
       .y-margin-#{$key}-until-#{$ref} {margin-top: $margin; margin-bottom: $margin;}
       .xy-margin-#{$key}-until-#{$ref} {margin: $margin;}
       .oneway-margin-#{$key}-until-#{$ref} {margin-bottom: $margin;}
-      .pass-oneway-margin-#{$key}-until-#{$ref} >* {margin-bottom: $margin;}
       
     }
     
@@ -48,7 +46,6 @@ $breakpoints: (
       .y-margin-#{$key}-from-#{$ref} {margin-top: $margin; margin-bottom: $margin;}
       .xy-margin-#{$key}-from-#{$ref} {margin: $margin;}
       .oneway-margin-#{$key}-from-#{$ref} {margin-bottom: $margin;}
-      .pass-oneway-margin-#{$key}-from-#{$ref} >* {margin-bottom: $margin;}
       
     }
        

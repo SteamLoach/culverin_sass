@@ -5,12 +5,12 @@ $primary-color: #000000;
 $offset-color: #FEFDFD;
 
 //page
-$background: null;
+$background: #EEE;
 $brand-1: #060960;
 $brand-2: #DE0015;
 $brand-3: #374BB0;
-$brand-4: #060960;
-$brand-5: #5E4C5A;
+$brand-4: #5E4C5A;
+$brand-5: null;
 
 //components
 $cta: $brand-2;
@@ -34,7 +34,7 @@ html {
 $touch-from: 425px;
 $tablet-from: 760px;
 $laptop-from: 1024px;
-$desktop-from: 1440px;
+$desktop-from: 1320px;
 ////
 $mobile-until: $touch-from;
 $touch-until: $tablet-from;

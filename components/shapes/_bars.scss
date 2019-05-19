@@ -1,9 +1,38 @@
+$thin: 4px;
+$medium: 6px;
+$thick: 10px;
+//
+$rounding: 5px;
+
+
 @mixin color-bar($height, $color, $rounded) {
   height: $height;
   background-color: $color;
   border-radius: $rounded;
 }
 
-.thin-bar {
-  @include color-bar(5px, $brand-3, 5px)
+$girths: (
+  thin: $thin,
+  medium: $medium,
+  thick: $thick
+) ;
+  
+$colors: (
+  1: $brand-1,
+  2: $brand-2,
+  3: $brand-3,
+  4: $brand-4,
+  5: $brand-5
+) ;
+
+@each $key, $girth in $girths {
+  
+  @each $ref, $color in $colors {
+    
+    .#{$key}-bar-#{$ref} {@include color-bar($girth, $color, $rounding)}
+    
+  }
+  
 }
+
+
