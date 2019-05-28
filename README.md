@@ -52,11 +52,13 @@ Culverin offers 24 column classes across 5 breakpoints
 The responsive width of any element can be specified by appending a breakpoint with the appropraite column reference:  
 
 ```html
-<article class="mobile-24 tablet-20 laptop-12></article>
+<article class="mobile-24 
+                tablet-20
+                laptop-12></article>
 ```
 
-If the element in question is the direct descendent of a `row`, its defined width should be a fraction of the total viewport width. 
-If the element is _not_ the direct descendent of a `row`, its width will be relative to containing parent:
+If the element in question is the direct descendent of a `.row`, its defined width should be a fraction of the total viewport width. 
+If the element is _not_ the direct descendent of a `.row`, its width will be relative to containing parent:
 
 ```html
 <div class="row">  <!-- 100% viewport width by default -->
@@ -82,7 +84,7 @@ Culverin offers three basic, relatively unopinionated 'container' elements, inte
   display: flex;
 }
 ```
-`.row` prevents wrapping by default. This can be overidden with the `can-wrap` class, and further tailored with the use of breakpoint concious `until` and `from` modifiers:
+`.row` prevents wrapping by default. This can be overidden with the `.can-wrap` class, and further tailored with the use of breakpoint concious `until` and `from` modifiers:
 
 ```html
 <!-- forces wrapping after the laptop breakpoint -->
@@ -112,7 +114,7 @@ The `.container` class is intended as a `<section>` or `<article>` level contain
 }
 ```
 
-`.container` accepts the `.hidden` and `no-wrap` classes, which can be modified in turn with `until` and `from`. Horizontal centering can be overridden by any valid `x-` positioning class such as `x-around`. Positioning classes also accept `until` and `from`, as shown in the example below.
+`.container` accepts the `.hidden` and `.no-wrap` classes, which can be modified in turn with `until` and `from`. Horizontal centering can be overridden by any valid `.x-` positioning class such as `.x-around`. Positioning classes also accept `until` and `from`, as shown in the example below.
 
 ```html
 <div class="row can-wrap x-center">
