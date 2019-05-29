@@ -133,7 +133,7 @@ The `.container` class is intended as a `<section>` or `<article>` level contain
 }
 ```
 
-`.container` accepts the `.hidden` and `.no-wrap` classes, which can be modified in turn with `-until` and `-from`. Horizontal centering can be overridden by any valid `.x-` positioning class such as `.x-around`. Positioning classes also accept `until` and `-from`, as shown in the example below.
+`.container` accepts the `.hidden` and `.no-wrap` classes, which can be modified in turn with `-until` and `-from`. Horizontal centering can be overridden by any valid `.x-` positioning class such as `.x-around`. Positioning classes also accept `-until` and `-from`, as shown in the example below.
 
 ```html
 <div class="row can-wrap x-center">
@@ -179,15 +179,7 @@ Culverin makes use of axis based positioning classes to specify justification an
 
 Culverin uses the `.x` prefix to position content along the x axis:
 
-`.x` `-center`
-
-     `-start`
-     
-     `-end`
-     
-     `-between`
-     
-     `-around`
+`.x` `-center` | `-start` | `-end` | `-between` | `-around`
      
      
 All the above accept `-until` and `-from` as breakpoint concious modifiers: 
@@ -203,15 +195,7 @@ All the above accept `-until` and `-from` as breakpoint concious modifiers:
 
 Culverin uses the `.y` prefix to align items on a single row along the y axis:
 
-`.y` `-center`
-
-     `-start`
-     
-     `-end`
-     
-     `-stretch`
-     
-     `-baseline`
+`.y` `-center` | `-start` | `-end` | `-stretch` | `-baseline`
      
      
 As with justification classes, all `.y` classes accept `-until` and `-from`.
@@ -220,19 +204,8 @@ As with justification classes, all `.y` classes accept `-until` and `-from`.
 
 Culverin uses the `.yc` prefix to align content on multiple rows along the y axis:
 
-`.yc` `-center`
-
-      `-start`
+`.yc` `-center` | `-start` | `-end` | `-between` | `-around` | `-stretch`
       
-      `-end`
-      
-      `-between`
-      
-      `-around`
-      
-      `-stretch`
-      
-
 As with justification and item alignment classes, all `.xy` classes accept `-until` and `-from` as modifiers.
 
 #### xy Centering
