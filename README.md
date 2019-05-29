@@ -28,10 +28,13 @@ In addition to numbered 'column' width classes (`.mobile-24`, `.laptop-12`, etc)
 Modifiers are _inclusive_ of the device they reference, and should be included _after_ any related default classes:
 
 ```html
-<div class="wrapper oneway-margin-2 oneway-margin-4-from-tablet"></div>
+<div class="wrapper oneway-margin-2
+            oneway-margin-4-from-tablet"> ... </div>
 
-<div class="container x-around-from-laptop"></div>
+<div class="container 
+            x-around-from-laptop"> ... </div>
 ```
+
 
 ### Columns
 
@@ -48,7 +51,7 @@ The responsive width of any element can be specified by appending a breakpoint w
 ```html
 <article class="mobile-24 
                 tablet-20
-                laptop-12></article>
+                laptop-12> ... </article>
 ```
 
 If the element in question is the direct descendent of a `.row`, its defined width should be a fraction of the total viewport width. 
@@ -58,10 +61,11 @@ If the element is _not_ the direct descendent of a `.row`, its width will be rel
 <div class="row">  <!-- 100% viewport width by default -->
   <div class="container 
               mobile-12"> <!-- 50% viewport width -->
-    <div class="mobile-24"></div> <!-- 100% of container's width, or 50% of the viewport -->
+    <div class="mobile-24"> <!-- 100% of container's width, or 50% of the viewport --> </div> 
   </div> 
 </div
 ```
+
 
 ### Containers
 
@@ -75,13 +79,12 @@ A simple usecase might be:
 
 ```html
 <section class="row x-center">
-  <article class="container x-around y-center mobile-18">
-    <div class="wrapper mobile-16">
-    ...
-    </div>
-    <div class="wrapper mobile-8">
-    ...
-    </div>
+  <article class="container x-around y-center 
+                  mobile-18">
+    <div class="wrapper 
+                mobile-16"> ... </div>
+    <div class="wrapper 
+                mobile-8"> ... </div>
   </article>
 </section>
 ```
@@ -101,17 +104,20 @@ A simple usecase might be:
 
 ```html
 <!-- forces wrapping after the laptop breakpoint -->
-<div class="row can-wrap-from-laptop"></div>
+<div class="row 
+            can-wrap-from-laptop"> ... </div>
  
 <!-- allows wrapping until the tablet breakpoint -->
-<div class="row can-wrap-until-tablet</div>
+<div class="row 
+            can-wrap-until-tablet"> ... </div>
             
 ```
 
 `.row` elements also accept the `.hidden` class, which in turn accepts the `-until` and `-from` modifiers:
 
 ```html
-<div class="row hidden-until-tablet"></div>
+<div class="row 
+            hidden-until-tablet"></div>
 ```
 
 #### .container
@@ -133,22 +139,89 @@ The `.container` class is intended as a `<section>` or `<article>` level contain
 <div class="row can-wrap x-center">
   <article class="container 
                   mobile-22 
-                  laptop-18 x-around-from-laptop"></article>
+                  laptop-18 x-around-from-laptop"> ... </article>
   <article class="container 
                   mobile-12
-                  hidden-from-tablet"></article>
+                  hidden-from-tablet"> ... </article>
 </div>
 ```
 
-####.wrapper
+#### .wrapper
 
-`.wrapper` is a loose catch-all class for turning any element into a flex-container. `.wrapper` allows wrapping by default, and accepts the `.hidden` and `.no-wrap` classes (with optional `-until` and `-from` modifiers) in the same way as `.container`. 
+`.wrapper` is a loose catch-all class for turning elements into flex-containers. `.wrapper` allows wrapping by default, and accepts the `.hidden` and `.no-wrap` classes (with optional `-until` and `-from` modifiers) in the same way as `.container`. 
 
-`.wrapper` also takes the `.is-absolute` class, applying absolulte position in relation to the containing parent. Both `.row` and `.container` elements are relatively positioned by default so as to provide a reference for descendent `.wrapper is-absolute` elements.
-`is-absolute` accepts `-from` and `-until` modifiers, eg: `.is-absolute-until-tablet`.
+```html
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+
+`.wrapper` also accepts the `.is-absolute` class. Both `.row` and `.container` elements are relatively positioned by default so as to provide a reference for descendent `.wrapper is-absolute` elements.
+
+`is-absolute` accepts `-from` and `-until` modifiers, as in the example below:
+
+```html
+<article class="container x-center 
+                mobile-24">
+  <div class="wrapper 
+              mobile-18 
+              tablet-12 is-absolute-until-tablet"> ... </div>
+</article>
+```
 
 
+### Positioning 
 
+Culverin makes use of axis based positioning classes to specify justification and alignment inside `.row`, `.container`, and `.wrapper` elements. As positioning classes are flex-box based, they **won't** work if applied to elements without the `{display: flex;}` attribute.
+
+#### Justifying Content
+
+Culverin uses the `.x` prefix to position content along the x axis:
+
+`.x` `-center`
+     `-start`
+     `-end`
+     `-between`
+     `-around`
+     
+All the above accept `-until` and `-from` as breakpoint concious modifiers: 
+
+```html
+<div class="wrapper x-center
+            mobile-24
+            tablet-18 x-between-from-tablet
+            laptop-20 x-around-from-laptop"> ... </div>
+```
+
+#### Aligning Items
+
+Culverin uses the `.y` prefix to align items on a single row along the y axis:
+
+`.y` `-center`
+     `-start`
+     `-end`
+     `-stretch`
+     `-baseline`
+     
+As with justification classes, all `.y` classes accept `-until` and `-from`.
+
+#### Aligning Content
+
+Culverin uses the `.yc` prefix to align content on multiple rows along the y axis:
+
+`.yc` `-center`
+      `-start`
+      `-end`
+      `-between`
+      `-around`
+      `-stretch`
+
+As with justification and item alignment classes, all `.xy` classes accept `-until` and `-from` as modifiers.
+
+#### xy Centering
+
+`xy-center` can be used to quickly center content along both axis **on a single row**.
 
 
 
