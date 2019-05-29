@@ -1,6 +1,6 @@
 # Culverin
 
-Culverin is a lightweight flex-box framework designed to help with scaffolding responsive layouts. It utlises:
+Culverin is a lightweight flex-box framework designed to help with scaffolding responsive layouts. It utilises:
 
 * A 24 column, mobile first grid 
 * Simple flex-box container classes
@@ -71,9 +71,9 @@ If the element is _not_ the direct descendent of a `.row`, its width will be rel
 
 Culverin offers three basic, relatively unopinionated 'container' elements, intended to be used as a convenient base. They are, in loose order of heirarchy:
 
-1 - `.row`
-2 - `.container`
-3 - `.wrapper`
+1. `.row`
+2. `.container`
+3. `.wrapper`
 
 A simple usecase might be:
 
