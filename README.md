@@ -213,7 +213,65 @@ As with justification and item alignment classes, all `.xy` classes accept `-unt
 `xy-center` can be used to quickly center content along both axis **on a single row**.
 
 
+### Padding
 
+Padding can be applied using `.x-pad` | `.y-pad` | `.xy-pad` appended with `rem` number references `-1` through `-12`:
+
+```html
+<div class="wrapper x-between xy-pad-4"> ... </div
+```
+
+Padding rises with the appended number; by default, `pad-6` applies `1rem` of padding, with `pad-1` and `pad-12` applying `0.1rem` and `3rem` respectively. 
+
+All padding classes accept `until` and `from`:
+
+```html
+<div class="container x-pad-6 y-pad-4
+            y-pad-2-until-tablet
+            x-pad-8-from-laptop"> ... </div>
+```
+
+### Margin
+
+Margin is applied using `.x-margin` | `.y-margin` | `.xy-margin` | appended with `rem` number references `-1` through `-12`. 
+
+```html
+<div class="wrapper x-between xy-margin-2"> ... </div
+```
+
+Following the principle of single-direction margins, Culvering includes a `.oneway-margin` class which applies margin in a single direction (down by default):
+
+```html
+<div class="row oneway-margin-4"> ... </div
+```
+
+Margin rises with the appended number; by default, `pad-6` applies `3rem` of padding, with `pad-1` and `pad-12` applying `0.4rem` and `10rem` respectively. 
+
+All margin classes accept `until` and `from`:
+
+```html
+<div class="container x-margin-2 oneway-margin-1
+            oneway-margin-2-from-tablet
+            x-margin-3-from-laptop"> ... </div>
+```
+
+### Typography
+
+Culverin includes `rem` based classes for both `font-size` and `line-height`. A default `font-size` and `line-height` of `22px` and `1.6` respectively are applied to the root `html` element. 
+
+#### .font-size
+
+`font-size` can be altered using the `.font-size` class, apended with `-smallest` | `-smaller` | `-small` | `-medium` | `-large` | `-larger` | `-largest`. 
+
+Size scales with the appended modifier; `-medium` represents the root size by default, with smallest and largest applying a size of `0.6rem` and `2rem` respectively.
+
+All `.font-size` classes accept `-from` and `-until`.
+
+#### .line-height
+
+#### headings
+
+#### color
 
 
 
