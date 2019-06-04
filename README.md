@@ -2,12 +2,11 @@
 
 Culverin is a lightweight flex-box framework designed to help with scaffolding responsive layouts. It utilises:
 
-* A 24 column, mobile first grid for responsive width
-* 24 responsive _vh_ based height classes 
-* Simple flex-box container classes
-* Justification and alignment 
-* rem based padding and margins
-* Typography alignment and color, with rem based size and lineheight 
+* [Responsive classes for `width` and `height`](https://github.com/SteamLoach/culverin_sass#dimensions)
+* [Simple flex-box container classes](https://github.com/SteamLoach/culverin_sass#containers)
+* [Justification and alignment](https://github.com/SteamLoach/culverin_sass#positioning) 
+* rem based [padding](https://github.com/SteamLoach/culverin_sass#padding) and [margins](https://github.com/SteamLoach/culverin_sass#margin)
+* [Typography alignment and color, with rem based size and lineheight](https://github.com/SteamLoach/culverin_sass#typography) 
 
 ### Responsive Classes
 
@@ -47,7 +46,7 @@ Culverin offers 24 `width` and 24 `height` classes across 5 breakpoints
 * laptop - from `1024px`
 * desktop - from `1320px`
 
-#### width
+#### Width
 
 The responsive width of any element can be specified by appending a breakpoint with the appropriate `width` reference:  
 
@@ -69,7 +68,7 @@ If the element is _not_ the direct descendent of a `.row`, its width will be rel
 </div
 ```
 
-#### height
+#### Height
 
 Height classes are intended for use in components such as full-width banners or hero images. The responsive `height` of any element can be specified by appending a breakpoint with the appropriate `height-#` reference:
 
