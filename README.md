@@ -6,7 +6,7 @@ Culverin is a lightweight flex-box framework designed to help with scaffolding r
 * [Simple flex-box container classes](https://github.com/SteamLoach/culverin_sass#containers)
 * [Justification and alignment](https://github.com/SteamLoach/culverin_sass#positioning) 
 * rem based [padding](https://github.com/SteamLoach/culverin_sass#padding) and [margins](https://github.com/SteamLoach/culverin_sass#margin)
-* [Typography alignment and color, with rem based size and lineheight](https://github.com/SteamLoach/culverin_sass#typography) 
+* [Typography alignment, with rem based size and lineheight](https://github.com/SteamLoach/culverin_sass#typography) 
 
 ### Responsive Classes
 
@@ -272,6 +272,10 @@ All margin classes accept `until` and `from`:
 ### Typography
 
 Culverin includes `rem` based classes for both `font-size` and `line-height`. A default `font-size` and `line-height` of `22px` and `1.6` respectively are applied to the root `html` element. 
+
+#### .text-align
+
+Text alignment can be set using the `.text-align` class apended with `-left` | `-right` | `-center`. All text alignment classes accept `-from` and `-until`. 
 
 #### .font-size
 
