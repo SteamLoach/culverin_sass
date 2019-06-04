@@ -1,8 +1,8 @@
 /****Colorscheme****/
 
 //fonts
-$primary-color: #000000;
-$offset-color: #FEFDFD;
+$default-font-color: #000000;
+$offset-font-color: #FEFDFD;
 
 //page
 $background: #EEE;
@@ -17,29 +17,23 @@ $cta: $brand-2;
 
 /****Typography****/
 
+$font-set: 'Raleway', sans-serif;
 $font-size-root: 18px;
 $line-height-root: 1.6;
-
-html {
-  font-family: 'Raleway', sans-serif;
-  font-size: $font-size-root;
-  line-height: $line-height-root;
-  color: $primary-color;
-}
 
 /**********************************CLASSES******************************/
 
 /****BREAKPOINTS****/
 
+$default: null; 
+$mobile-from: 375px; 
 $touch-from: 425px;
-$tablet-from: 760px;
-$laptop-from: 1024px;
-$desktop-from: 1320px;
-////
-$mobile-until: $touch-from;
-$touch-until: $tablet-from;
-$tablet-until: $laptop-from;
-$laptop-until: $desktop-from;
+$phablet-from: 590px;
+$tablet-from: 768px;
+$notebook-from: 890px;
+$laptop-from: 1024px; 
+$desktop-from: 1360px; 
+$widescreen-from: 1580px; 
 
 /****FONT****/
 $font-size-smallest: 0.6rem;
@@ -60,18 +54,18 @@ $line-height-larger: 2;
 $line-height-largest: 2.4;
 
 /****PADDING****/
-$padding-1: 0.1rem;
-$padding-2: 0.2rem;
-$padding-3: 0.4rem;
-$padding-4: 0.6rem;
-$padding-5: 0.8rem;
-$padding-6: 1rem;
-$padding-7: 1.2rem;
-$padding-8: 1.4rem;
-$padding-9: 1.6rem;
-$padding-10: 1.8rem;
-$padding-11: 2rem;
-$padding-12: 3rem;
+$padding-1: 0.2rem;
+$padding-2: 0.5rem;
+$padding-3: 0.8rem;
+$padding-4: 1rem;
+$padding-5: 1.5rem;
+$padding-6: 2rem;
+$padding-7: 2.5rem;
+$padding-8: 3rem;
+$padding-9: 3.5rem;
+$padding-10: 4rem;
+$padding-11: 5rem;
+$padding-12: 6rem;
 
 /****MARGINS****/
 $margin-1: 0.4rem;

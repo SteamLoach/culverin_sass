@@ -1,3 +1,12 @@
+//Font Base
+html {
+  font-family: $font-set;
+  font-size: $font-size-root;
+  line-height: $line-height-root;
+  color: $default-font-color;
+}
+
+
 $sizes: (
   smallest: $font-size-smallest,
   smaller: $font-size-smaller,
@@ -64,18 +73,8 @@ $breakpoints: (
 }  
 
 //Headings
-h1 {font-size: 2.6rem}
-h2 {font-size: 2.2rem}
-h3 {font-size: 1.8rem}
-h4 {font-size: 1.6rem}
 
-//Color
-.font-offset {color: $offset-color;}
-.brand-1 {color: $brand-1;}
-.brand-2 {color: $brand-2;}
-.brand-3 {color: $brand-3;}
-.brand-4 {color: $brand-4;}
-.brand-5 {color: $brand-5;}
+
 
 
 
