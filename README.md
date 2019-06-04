@@ -275,7 +275,7 @@ Culverin includes `rem` based classes for both `font-size` and `line-height`. A 
 
 #### .text-align
 
-Text alignment can be set using the `.text-align` class apended with `-left` | `-right` | `-center`. All text alignment classes accept `-from` and `-until`. 
+Text alignment can be set using the `.text-align` class apended with `-left` | `-right` | `-center` | `-justify` All text alignment classes accept `-from` and `-until`. 
 
 #### .font-size
 
