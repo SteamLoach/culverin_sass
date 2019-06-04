@@ -2,7 +2,8 @@
 
 Culverin is a lightweight flex-box framework designed to help with scaffolding responsive layouts. It utilises:
 
-* A 24 column, mobile first grid 
+* A 24 column, mobile first grid for responsive width
+* 24 responsive _vh_ based height classes 
 * Simple flex-box container classes
 * Justification and alignment 
 * rem based padding and margins
@@ -36,9 +37,9 @@ Modifiers are _inclusive_ of the device they reference, and should be included _
 ```
 
 
-### Columns
+### Dimensions
 
-Culverin offers 24 column classes across 5 breakpoints
+Culverin offers 24 `width` and 24 `height` classes across 5 breakpoints
 
 * mobile - default 
 * touch - from `425px`
@@ -46,7 +47,9 @@ Culverin offers 24 column classes across 5 breakpoints
 * laptop - from `1024px`
 * desktop - from `1320px`
 
-The responsive width of any element can be specified by appending a breakpoint with the appropriate column reference:  
+#### width
+
+The responsive width of any element can be specified by appending a breakpoint with the appropriate `width` reference:  
 
 ```html
 <article class="mobile-24 
@@ -65,6 +68,18 @@ If the element is _not_ the direct descendent of a `.row`, its width will be rel
   </div> 
 </div
 ```
+
+#### height
+
+Height classes are intended for use in components such as full-width banners or hero images. The responsive `height` of any element can be specified by appending a breakpoint with the appropriate `height-#` reference:
+
+```html
+<article id="full-width-banner" class="row mobile-height-8
+                                       tablet-height-10
+                                       laptop-height-12"> ... </article>
+```
+
+Responsive `height` classes define the height of an element relative the the screen or _viewport_ height. Therefore, an element given `-height-12` would occupy 50% of the viewport, with an element given `-height-24` occupying the full height of the screen. 
 
 
 ### Containers
@@ -221,7 +236,7 @@ Padding can be applied using `.x-pad` | `.y-pad` | `.xy-pad` appended with `rem`
 <div class="wrapper x-between xy-pad-4"> ... </div
 ```
 
-Padding rises with the appended number; by default, `pad-6` applies `1rem` of padding, with `pad-1` and `pad-12` applying `0.1rem` and `3rem` respectively. 
+Padding rises with the appended number; by default, `-pad-6` applies `1rem` of padding, with `-pad-1` and `-pad-12` applying `0.1rem` and `3rem` respectively. 
 
 All padding classes accept `until` and `from`:
 
@@ -245,7 +260,7 @@ Following the principle of single-direction margins, Culvering includes a `.onew
 <div class="row oneway-margin-4"> ... </div
 ```
 
-Margin rises with the appended number; by default, `pad-6` applies `3rem` of padding, with `pad-1` and `pad-12` applying `0.4rem` and `10rem` respectively. 
+Margin rises with the appended number; by default, `-margin-6` applies `3rem` of margin, with `-margin-1` and `-margin-12` applying `0.4rem` and `10rem` respectively. 
 
 All margin classes accept `until` and `from`:
 
@@ -269,9 +284,14 @@ All `.font-size` classes accept `-from` and `-until`.
 
 #### .line-height
 
-#### headings
+`line-height` can be altered using the `.line-height` class, apended with `-none` |  `-smallest` | `-smaller` | `-small` | `-medium` | `-large` | `-larger` | `-largest`. 
 
-#### color
+Size scales with the appended modifier; `-none` sets lineheight at `1`, `-medium` represents the root line height by default, with `-smallest` and `-largest` applying a size of `1.1` and `2.4` respectively.
+
+All `.line-height` classes accept `-from` and `-until`.
+
+
+
 
 
 
