@@ -1,6 +1,9 @@
+/***********WIDTH & HEIGHT************/
+
 /****Portrait Mobile (assumed default)****/
   @for $i from 1 through 24 {
     .mobile-#{$i} {width: 100% / 24 *$i;}
+    .mobile-height-#{$i} {height: 100vh / 24 *$i;}
   }
 
 /****Landscape Mobile / Small Touch****/
@@ -8,6 +11,7 @@
   
   @for $i from 1 through 24 {
     .touch-#{$i} {width: 100% / 24 *$i;}
+    .touch-height-#{$i} {height: 100vh / 24 *$i;}
   }
 }
 
@@ -16,7 +20,8 @@
   
   @for $i from 1 through 24 {
     .tablet-#{$i} {width: 100% / 24 *$i;}
-  }  
+    .tablet-height-#{$i} {height: 100vh / 24 *$i;}  
+  }
 }
 
 /****Laptop****/
@@ -24,7 +29,8 @@
   
   @for $i from 1 through 24 {
     .laptop-#{$i} {width: 100% / 24 *$i;}
-  }  
+    .laptop-height-#{$i} {height: 100vh / 24 *$i;}  
+  }
 }
 
 /****Desktop****/
@@ -32,5 +38,7 @@
   
   @for $i from 1 through 24 {
     .desktop-#{$i} {width: 100% / 24 *$i;}
-  }  
+    .desktop-height-#{$i} {height: 100vh / 24 *$i;}  
+  }
 }
+

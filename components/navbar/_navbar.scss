@@ -38,6 +38,17 @@ $nav-link-hover: $brand-2;
   }
 }
 
+.nav-item.is-active {
+  background-color: $nav-link-hover;
+}
+
+//Sticky
+.js-sticky-nav {
+    position: fixed;
+    top: 0px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2) ;  
+}
+
 //Dropdowns//
 
 .dropdown-wrapper {
@@ -110,8 +121,8 @@ $nav-link-hover: $brand-2;
   overflow: hidden;
 }
 
-.mobile-nav-item {
-
+.mobile-nav-item.is-active {
+  background-color: $nav-link-hover;
 }
 
 .mobile-nav-link:hover {

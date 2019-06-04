@@ -63,6 +63,12 @@ $breakpoints: (
   .text-align-#{$align} {text-align: $align;}
 }  
 
+//Headings
+h1 {font-size: 2.6rem}
+h2 {font-size: 2.2rem}
+h3 {font-size: 1.8rem}
+h4 {font-size: 1.6rem}
+
 //Color
 .font-offset {color: $offset-color;}
 .brand-1 {color: $brand-1;}
