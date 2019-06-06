@@ -1,0 +1,66 @@
+/*************************************
+***********MARGIN*******************
+************************************/
+
+/****Defaults****/
+
+@mixin x-margin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin y-margin($margin) {
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+/****Breakpoint Concious****/
+
+@mixin x-margin-until($breakpoint, $margin) {
+  @media screen and (max-width: $breakpoint) {
+    @include x-margin($margin) ; 
+  }
+}
+
+@mixin x-margin-from($breakpoint, $margin) {
+  @media screen and (min-width: $breakpoint) {
+    @include x-margin($margin) ; 
+  }
+}
+
+@mixin y-margin-until($breakpoint, $margin) {
+  @media screen and (max-width: $breakpoint) {
+    @include y-margin($margin) ; 
+  }
+}
+
+@mixin y-margin-from($breakpoint, $margin) {
+  @media screen and (min-width: $breakpoint) {
+    @include y-margin($margin) ; 
+  }
+}
+
+@mixin xy-margin-until($breakpoint, $margin) {
+  @media screen and (max-width: $breakpoint) {
+    @include x-margin($margin) ; 
+    @include y-margin($margin) ; 
+  }
+}
+
+@mixin custom-margin-until($breakpoint, $top, $right, $bottom, $left) {
+  @media screen and (max-width: $breakpoint) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-left: $left;
+    margin-bottom: $bottom;
+  }
+}
+
+@mixin custom-margin-from($breakpoint, $top, $right, $bottom, $left) {
+  @media screen and (min-width: $breakpoint) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-left: $left;
+    margin-bottom: $bottom;
+  }
+}

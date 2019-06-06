@@ -18,22 +18,32 @@ $cta: $brand-2;
 /****Typography****/
 
 $font-set: 'Raleway', sans-serif;
-$font-size-root: 18px;
+$font-size-root: 22px;
 $line-height-root: 1.6;
 
 /**********************************CLASSES******************************/
 
 /****BREAKPOINTS****/
 
-$default: null; 
-$mobile-from: 375px; 
-$touch-from: 425px;
-$phablet-from: 590px;
-$tablet-from: 768px;
-$notebook-from: 890px;
-$laptop-from: 1024px; 
-$desktop-from: 1360px; 
-$widescreen-from: 1580px; 
+$touch: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
+////
+$mobile-until: $touch;
+$touch-until: $tablet;
+$tablet-until: $laptop;
+$laptop-until: $desktop; 
+////
+$touch-from: $touch;
+$tablet-from: $tablet;
+$laptop-from: $laptop;
+$desktop-from: $desktop;
+
+/****COLUMNS****/
+
+$grid-columns: 24; //alters the number of calculated 'width' columns
+
 
 /****FONT****/
 $font-size-smallest: 0.6rem;

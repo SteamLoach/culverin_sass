@@ -1,0 +1,49 @@
+.test-row {
+  
+  //Defaults
+  @include row() ;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 450px;
+  
+  //Breakpoints
+  @include x-from($tablet, around) ; 
+  @include height-break($laptop, 600px);
+  @include yc-from($laptop, center) ; 
+  //Theme
+  background-color: goldenrod;
+    
+}
+
+.test-box {
+  @include wrapper() ; 
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  @include default-width(4) ;
+  
+  @include width-break($touch, 10) ;
+  @include height-break($touch, 400px) ;
+
+  @include width-break($laptop, 12) ; 
+  background-color: aqua;
+}
+
+.test-box-2 {
+  @include default-width(24) ; 
+  
+  @include x-pad(0.4rem) ; 
+  @include y-pad(0.2rem) ; 
+    
+  background-color: darkred;
+}
+
+.test-title {
+  font-size: 2rem;
+  @include font-size-from($desktop, 3rem) ; 
+}
+
+.test-text {
+  @include text-align-from($laptop, center) ; 
+}

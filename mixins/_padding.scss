@@ -1,0 +1,66 @@
+/*************************************
+***********PADDING*******************
+************************************/
+
+/****Defaults****/
+
+@mixin x-pad($pad) {
+  padding-left: $pad;
+  padding-right: $pad;
+}
+
+@mixin y-pad($pad) {
+  padding-top: $pad;
+  padding-bottom: $pad;
+}
+
+/****Breakpoint Concious****/
+
+@mixin x-pad-until($breakpoint, $pad) {
+  @media screen and (max-width: $breakpoint) {
+    @include x-pad($pad) ; 
+  }
+}
+
+@mixin x-pad-from($breakpoint, $pad) {
+  @media screen and (min-width: $breakpoint) {
+    @include x-pad($pad) ; 
+  }
+}
+
+@mixin y-pad-until($breakpoint, $pad) {
+  @media screen and (max-width: $breakpoint) {
+    @include y-pad($pad) ; 
+  }
+}
+
+@mixin y-pad-from($breakpoint, $pad) {
+  @media screen and (min-width: $breakpoint) {
+    @include y-pad($pad) ; 
+  }
+}
+
+@mixin xy-pad-until($breakpoint, $pad) {
+  @media screen and (max-width: $breakpoint) {
+    @include x-pad($pad) ; 
+    @include y-pad($pad) ; 
+  }
+}
+
+@mixin custom-pad-until($breakpoint, $top, $right, $bottom, $left) {
+  @media screen and (max-width: $breakpoint) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-left: $left;
+    padding-bottom: $bottom;
+  }
+}
+
+@mixin custom-pad-from($breakpoint, $top, $right, $bottom, $left) {
+  @media screen and (min-width: $breakpoint) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-left: $left;
+    padding-bottom: $bottom;
+  }
+}

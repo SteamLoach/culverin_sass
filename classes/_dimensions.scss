@@ -1,19 +1,10 @@
 /***********WIDTH & HEIGHT************/
 
-/****Small Mobile (assumed default)****/
-  @for $i from 1 through 24 {
-    .default-#{$i} {width: 100% / 24 *$i;}
-    .default-height-#{$i} {height: 100vh / 24 *$i;}
-  }
-
-/**** Standard Mobile ****/
-@media screen and (min-width: $mobile-from) {
-  
+/****Portrait Mobile (assumed default)****/
   @for $i from 1 through 24 {
     .mobile-#{$i} {width: 100% / 24 *$i;}
     .mobile-height-#{$i} {height: 100vh / 24 *$i;}
   }
-}
 
 /****Landscape Mobile / Small Touch****/
 @media screen and (min-width: $touch-from) {
@@ -24,30 +15,12 @@
   }
 }
 
-/****Phablet / Small Tablet****/
-@media screen and (min-width: $phablet-from) {
-  
-  @for $i from 1 through 24 {
-    .phablet-#{$i} {width: 100% / 24 *$i;}
-    .phablet-height-#{$i} {height: 100vh / 24 *$i;}
-  }
-}
-
 /****Tablet****/
 @media screen and (min-width: $tablet-from) {
   
   @for $i from 1 through 24 {
     .tablet-#{$i} {width: 100% / 24 *$i;}
     .tablet-height-#{$i} {height: 100vh / 24 *$i;}  
-  }
-}
-
-/****Notebook****/
-@media screen and (min-width: $notebook-from) {
-  
-  @for $i from 1 through 24 {
-    .notebook-#{$i} {width: 100% / 24 *$i;}
-    .notebook-height-#{$i} {height: 100vh / 24 *$i;}  
   }
 }
 
@@ -66,14 +39,5 @@
   @for $i from 1 through 24 {
     .desktop-#{$i} {width: 100% / 24 *$i;}
     .desktop-height-#{$i} {height: 100vh / 24 *$i;}  
-  }
-}
-
-/****Widescreen****/
-@media screen and (min-width: $widescreen-from) {
-  
-  @for $i from 1 through 24 {
-    .widescreen-#{$i} {width: 100% / 24 *$i;}
-    .widescreen-height-#{$i} {height: 100vh / 24 *$i;}  
   }
 }

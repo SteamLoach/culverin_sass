@@ -1,0 +1,24 @@
+/*************************************
+***********WIDTH & HEIGHT************
+************************************/
+
+
+/***********SPECIFIC DIMENSIONS***********/
+
+//Width mixins take a breakpoint and an integer between 1 and the $grid-column variable (24 by default) and return a percentage
+
+//Height mixins take  a breakpoint and a value which must include a unit (px, vh, etc)
+
+@mixin default-width($column) {width: 100%/$grid-columns * $column;}
+
+@mixin width-break($breakpoint, $column) {
+  @media screen and (min-width: $breakpoint) {
+    width: 100% / $grid-columns * $column;
+  }
+}
+
+@mixin height-break($breakpoint, $height) {
+  @media screen and (min-width: $breakpoint) {
+    height: $height;
+  }
+}

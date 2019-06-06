@@ -1,0 +1,90 @@
+/*************************************
+***********TYPOGRAPHY****************
+************************************/
+
+/****Font defaults****/
+
+html {
+  font-family: $font-set;
+  font-size: $font-size-root;
+  line-height: $line-height-root;
+  color: $default-font-color;
+}
+
+/****Breakpoint Concious Font Size****/
+
+@mixin font-size-until ($breakpoint, $size) {
+  @media screen and (max-width: $breakpoint) {
+    font-size: $size;
+  }
+}
+
+@mixin font-size-from ($breakpoint, $size) {
+  @media screen and (min-width: $breakpoint) {
+    font-size: $size;
+  }
+}
+
+/****Breakpoint Concious Line Height****/
+
+@mixin line-height-until ($breakpoint, $size) {
+  @media screen and (max-width: $breakpoint) {
+    line-height: $size;
+  }
+}
+
+@mixin line-height-from ($breakpoint, $size) {
+  @media screen and (min-width: $breakpoint) {
+    line-height: $size;
+  }
+}
+
+/****Breakpoint Concious Font Weight****/
+
+@mixin font-weight-until ($breakpoint, $weight) {
+  @media screen and (max-width: $breakpoint) {
+    font-weight: $weight;
+  }
+}
+
+@mixin font-weight-from ($breakpoint, $size) {
+  @media screen and (min-width: $breakpoint) {
+    font-weight: $weight;
+  }
+}
+
+/****Breakpoint Concious Alignment****/
+
+@mixin text-align-until ($breakpoint, $alignment) {
+  @media screen and (max-width: $breakpoint) {
+    @if $alignment == left {
+      text-align: left;
+    }
+    @else if $alignment == right {
+      text-align: right;
+    }
+    @else if $alignment == center {
+      text-align: center;
+    }
+    @else if $alignment == justify {
+      text-align: justify;
+    }
+  }
+}
+
+@mixin text-align-from ($breakpoint, $alignment) {
+  @media screen and (min-width: $breakpoint) {
+    @if $alignment == left {
+      text-align: left;
+    }
+    @else if $alignment == right {
+      text-align: right;
+    }
+    @else if $alignment == center {
+      text-align: center;
+    }
+    @else if $alignment == justify {
+      text-align: justify;
+    }
+  }
+}

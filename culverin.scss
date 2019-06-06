@@ -5,11 +5,19 @@
 @import './config.scss' ; 
 
 /****Scaffolding Classes****/
-@import './scaffolding/dimensions' ; 
-@import './scaffolding/containers' ; 
-@import './scaffolding/position' ; 
-@import './scaffolding/padding' ; 
-@import './scaffolding/margin' ; 
-@import './scaffolding/typography' ;
+@import './classes/dimensions' ; 
+@import './classes/containers' ; 
+@import './classes/position' ; 
+@import './classes/padding' ; 
+@import './classes/margin' ; 
+@import './classes/typography' ;
 
 /****Mixins****/
+@import './mixins/dimensions' ; 
+@import './mixins/containers' ; 
+@import './mixins/position' ; 
+@import './mixins/padding' ; 
+@import './mixins/margin' ; 
+@import './mixins/typography';
+
+@import './test' ; 
