@@ -2,6 +2,67 @@
 ***********POSITION******************
 ************************************/
 
+/****Base****/
+
+@mixin justify($val) {
+  
+    @if $val == center {
+      justify-content: center;
+    }
+    @else if $val == around {
+      justify-content: space-around;
+    }
+    @else if $val == between {
+      justify-content: space-between;
+    }
+    @else if $val == start {
+      justify-content: flex-start;
+    }
+    @else if $val == end {
+      justify-content: flex-end;
+    }
+}
+
+@mixin align($val) {
+    
+    @if $val == center {
+      align-items: center;
+    }
+    @else if $val == baseline {
+      align-items: baseline;
+    }
+    @else if $val == stretch {
+      align-items: stretch;
+    }
+    @else if $val == start {
+      align-items: flex-start;
+    }
+    @else if $val == end {
+      align-items: flex-end;
+    }
+}
+
+@mixin align-c($val) {
+  
+    @if $val == center {
+      align-content: center;
+    }
+    @else if $val == around {
+      align-content: space-around;
+    }
+    @else if $val == between {
+      align-content: space-between;
+    }
+    @else if $val == stretch {
+      align-items: stretch;
+    }
+    @else if $val == start {
+      align-content: flex-start
+    }
+    @else if $val == end {
+      align-content: flex-end;
+    }
+}
 
 /****XY****/
 
@@ -25,134 +86,38 @@
 /****Justify****/
 @mixin x-until($breakpoint, $val) {
   @media screen and (max-width: $breakpoint) {
-    
-    @if $val == center {
-      justify-content: center;
-    }
-    @else if $val == around {
-      justify-content: space-around;
-    }
-    @else if $val == between {
-      justify-content: space-between;
-    }
-    @else if $val == start {
-      justify-content: flex-start;
-    }
-    @else if $val == end {
-      justify-content: flex-end;
-    }
+    @include justify($val) ; 
   }
 }
 
 @mixin x-from($breakpoint, $val) {
   @media screen and (min-width: $breakpoint) {
-    
-    @if $val == center {
-      justify-content: center;
-    }
-    @else if $val == around {
-      justify-content: space-around;
-    }
-    @else if $val == between {
-      justify-content: space-between;
-    }
-    @else if $val == start {
-      justify-content: flex-start;
-    }
-    @else if $val == end {
-      justify-content: flex-end;
-    }
+    @include justify($val) ; 
   }
 }
 
 /****Align Items****/
 @mixin y-until($breakpoint, $val) {
   @media screen and (max-width: $breakpoint) {
-    
-    @if $val == center {
-      align-items: center;
-    }
-    @else if $val == baseline {
-      align-items: baseline;
-    }
-    @else if $val == stretch {
-      align-items: stretch;
-    }
-    @else if $val == start {
-      align-items: flex-start;
-    }
-    @else if $val == end {
-      align-items: flex-end;
-    }
+    @include align($val) ; 
   }
 }
 
 @mixin y-from($breakpoint, $val) {
   @media screen and (min-width: $breakpoint) {
-    
-    @if $val == center {
-      align-items: center;
-    }
-    @else if $val == baseline {
-      align-items: baseline;
-    }
-    @else if $val == stretch {
-      align-items: stretch;
-    }
-    @else if $val == start {
-      align-items: flex-start;
-    }
-    @else if $val == end {
-      align-items: flex-end;
-    }
+    @include align($val) ; 
   }
 }
 
 
 @mixin yc-until($breakpoint, $val) {
   @media screen and (max-width: $breakpoint) {
-    
-    @if $val == center {
-      align-content: center;
-    }
-    @else if $val == around {
-      align-content: space-around;
-    }
-    @else if $val == between {
-      align-content: space-between;
-    }
-    @else if $val == stretch {
-      align-items: stretch;
-    }
-    @else if $val == start {
-      align-content: flex-start
-    }
-    @else if $val == end {
-      align-content: flex-end;
-    }
+    @include align-c($val) ; 
   }
 }
 
 @mixin yc-from($breakpoint, $val) {
   @media screen and (min-width: $breakpoint) {
-    
-    @if $val == center {
-      align-content: center;
-    }
-    @else if $val == around {
-      align-content: space-around;
-    }
-    @else if $val == between {
-      align-content: space-between;
-    }
-    @else if $val == stretch {
-      align-items: stretch;
-    }
-    @else if $val == start {
-      align-content: flex-start
-    }
-    @else if $val == end {
-      align-content: flex-end;
-    }
+    @include align-c($val) ; 
   }
 }

@@ -5,21 +5,41 @@
 
 /****Base****/
 
-@mixin row() {
+%row {
   position: relative;
   width: 100%;
   display: flex;
 }
 
-@mixin container() {
+@mixin row($x, $y) {
+  @extend %row;
+  @include justify($x) ; 
+  @include align($y) ; 
+}
+
+
+%container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin wrapper() {
+@mixin container($x, $y) {
+  @extend %container;
+  @include justify($x) ; 
+  @include align($y) ; 
+}
+
+
+%wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+@mixin wrapper() {
+  @extend %wrapper;
+  @include justify($x) ; 
+  @include align($y) ;
 }
 
 /****Breakpoint Concious****/

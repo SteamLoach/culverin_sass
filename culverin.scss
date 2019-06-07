@@ -6,16 +6,16 @@
 
 /****Scaffolding Classes****/
 @import './classes/dimensions' ; 
-@import './classes/containers' ; 
 @import './classes/position' ; 
+@import './classes/containers' ; 
 @import './classes/padding' ; 
 @import './classes/margin' ; 
 @import './classes/typography' ;
 
 /****Mixins****/
 @import './mixins/dimensions' ; 
-@import './mixins/containers' ; 
 @import './mixins/position' ; 
+@import './mixins/containers' ; 
 @import './mixins/padding' ; 
 @import './mixins/margin' ; 
 @import './mixins/typography';
