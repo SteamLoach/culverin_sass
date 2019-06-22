@@ -64,3 +64,15 @@
     margin-bottom: $bottom;
   }
 }
+
+@mixin oneway-margin-until($breakpoint, $val) {
+  @media screen and (max-width: $breakpoint) {
+    margin-bottom: $val ; 
+  }
+}
+
+@mixin oneway-margin-from($breakpoint, $val) {
+  @media screen and (min-width: $breakpoint) {
+    margin-bottom: $val ; 
+  }
+}

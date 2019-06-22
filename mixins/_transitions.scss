@@ -1,0 +1,5 @@
+@mixin ease-in-all($secs) {
+  transition: all;
+  transition-duration: $secs;
+  transition-timing-function: ease;
+}
